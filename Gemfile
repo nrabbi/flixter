@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+# simple form gem
+gem 'simple_form'
+
+# Devise Authentication Gem
+gem 'devise', '>= 3.2.4'
+
 # Bootstrap 3 Gem
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'sprockets', '2.11.0'
