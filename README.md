@@ -7,6 +7,5 @@ Things i have learnt through making this web applicationa are documented below.
 
 * ...
 
-* ...
-
+Live Demo: http://flixter-nrabbi.herokuapp.com
 
