@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users
+  resources :lessons, only: [:show]
   root 'static_pages#index'
   resources :courses, only: [:index, :show]
 
