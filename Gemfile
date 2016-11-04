@@ -1,10 +1,14 @@
 source 'https://rubygems.org'
 
+# figaro gem
+gem "figaro"
+
 # mini magick gem
 gem 'mini_magick', '~> 4.3.1'
 
 # carrier wave gem
 gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
+gem "fog"
 
 # simple form gem
 gem 'simple_form'
