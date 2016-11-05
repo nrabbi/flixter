@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# ranked model gem
+gem 'ranked-model'
+
 # stripe gem
 gem "stripe"
 
