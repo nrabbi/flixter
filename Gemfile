@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# stripe gem
+gem "stripe"
+
 # figaro gem
 gem "figaro"
 
