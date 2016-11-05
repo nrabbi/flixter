@@ -1,5 +1,10 @@
 <br />
 <div class="hero-fixed col-xs-10 col-xs-offset-1">
+
+  <% if current_user && current_user.enrolled_in?(@course) %>
+    <h4 class="label label-info center-block">You Are Enrolled!</h4>
+  <% end %>
+
   <h1 class="text-center"><%= @course.title%></h1>
   <br />
   <%= image_tag @course.image, class: 'img-responsive center-block' %>
@@ -8,31 +13,38 @@
   <br />
     
   <span class="text-center">
-  <h4>
-    <span class="label label-default">
-      <%= number_to_currency @course.cost %>
-    </span><br/><br/>
-    <%= @course.description %>
-  </h4>
+    <h4>
+      <span class="label label-default">
+        <%= number_to_currency @course.cost %>
+      </span><br/><br/>
+      <%= @course.description %>
+    </h4>
   </span>
-   
+  
   <% if current_user && current_user == @course.user %>
     <br /><br />
-    <%= link_to 'Administer', instructor_course_path(@course), class: 'btn btn-danger btn-large pull-left' %>
+    <%= link_to 'Administer', instructor_course_path(@course), class: 'btn btn-danger btn-large center-block' %>
   <% end %>
+
+  <% if (current_user && current_user == @course.user) == false %>
+    <br /><br />
+    <%= link_to 'Enroll', course_enrollments_path(@course), class: 'btn btn-success center-block', method: :post %>
+  <% end %>
+    
   <br/>
   <br/>
   <br/>
+
 </div>
 
 <br class="clr" />
 <br class="clr" />
 
-<h2 class="text-center"><u>Course Structure</u></h2><br/>
+<h2 class="text-center"><u>Course Structure</u></h2>
 
 <div class="col-xs-10 col-xs-offset-1">
     <% @course.sections.each do |section| %>
-    <br /><br />
+    <br />
       <div class="section text-center">
         <h3>
           <%= section.title %>
