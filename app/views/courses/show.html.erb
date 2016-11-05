@@ -30,19 +30,26 @@
 
 <h2 class="text-center"><u>Course Structure</u></h2><br/>
 
-<div class="col-xs-10 col-xs-offset-1 box">
-  <% @course.sections.each do |section| %>
-    <div class="section">
-      <b><%= section.title%></b>
-      <% section.lessons.each do |lesson| %>
-        <div class="lesson">
-          <%= link_to lesson_path(lesson) do %>
-            <ul><%= lesson.title %>
-            -
-            <%= lesson.subtitle %></ul>
-          <% end %>
-        </div>
+<div class="col-xs-10 col-xs-offset-1">
+    <% @course.sections.each do |section| %>
+    <br /><br />
+      <div class="section text-center">
+        <h3>
+          <%= section.title %>
+        </h3>
+        <% section.lessons.each do |lesson| %>
+          <div class="col-xs-12 col-sm-6">
+            <div class="lesson text-center">
+            <br />
+              <%= link_to lesson_path(lesson) do %>
+                <b><%= lesson.title %></b>
+                <br />
+                <%= lesson.subtitle %>
+              <% end %>
+            </div>
+          </div>
       <% end %>
+      <br class="clr" />
     </div>
   <% end %>
 </div>
