@@ -1,0 +1,59 @@
+<br />
+
+<div class="hero-fixed col-xs-10 col-xs-offset-1">
+
+  <% if current_user.enrolled_courses.present? %> 
+
+    <u><h1 class="text-center">What I'm Learning</h1></u>
+    <% current_user.enrolled_courses.each do |course| %>
+      <h3 class="text-center">
+        <%= link_to course.title, course_path(course) %>
+      </h3>
+      <br />
+      <%= image_tag course.image, class: 'img-responsive center-block' %>
+      <br />
+      
+      <span class="text-center">
+        <h4><%= course.description%></h4>
+      </span>
+      
+      <br />
+
+      <div class="text-center">
+        <%= link_to "More Info...", course_path(course), class: 'btn-success btn-lg' %>
+      </div>
+
+      <hr class="col-xs-8 col-xs-offset-2">
+      <br class="clr" / >
+    <% end %>
+
+  <% end %>
+
+  <% if current_user.courses.present? %> 
+
+    <u><h1 class="text-center">What I'm Teaching</h1></u>
+    <% current_user.courses.each do |course| %>
+      <h3 class="text-center">
+        <%= link_to course.title, course_path(course) %>
+      </h3>
+
+      <br />
+      <%= image_tag course.image, class: 'img-responsive center-block' %>
+      <br />
+
+      <span class="text-center">
+        <h4><%= course.description%></h4>
+      </span>
+      <br />
+      
+      <div class="text-center">
+        <%= link_to "More Info...", course_path(course), class: 'btn btn-lg btn-info' %>
+      </div>
+
+      <hr class="col-xs-8 col-xs-offset-2">
+      <br class="clr" / >
+    <% end %>
+
+  <% end %>
+
+</div>
