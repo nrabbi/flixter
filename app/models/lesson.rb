@@ -4,4 +4,5 @@ class Lesson < ActiveRecord::Base
 
   include RankedModel
   ranks :row_order, :with_same => :section_id
+
 end

@@ -20,6 +20,8 @@ class Instructor::LessonsController < ApplicationController
 
   private
 
+  helper_method :current_section
+
   def current_lesson
     @current_lesson ||= Lesson.find(params[:id])
   end
@@ -36,7 +38,6 @@ class Instructor::LessonsController < ApplicationController
     end
   end
 
-  helper_method :current_section
   def current_section
     @current_section ||= Section.find(params[:section_id])
   end
