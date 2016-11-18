@@ -60,9 +60,52 @@
 </div>
   <div id="footer">
     <div class="container">
-      <b>Teachers</b>
-      <br />
-      <%= link_to 'Teach a Course', new_instructor_course_path %>    </div>
+
+      <div class="col-xs-12 col-sm-3 text-center">
+        <u><b>Instructors</b></u>
+        <br />
+        <%= link_to 'Teach a Course', new_instructor_course_path %>
+        <br/>
+        <%= link_to 'Dashboard', dashboard_path %>    
+      </div>
+
+      <div class="col-xs-12 col-sm-3 text-center">
+        <u><b>About</b></u>
+        <br />
+        <%= link_to 'Team', '#' %>
+        <br />
+        <%= link_to 'Careers', '#' %>
+        <br />
+        <%= link_to 'Privacy Policy', '#' %>
+      </div>
+
+      <div class="col-xs-12 col-sm-3 text-center">
+        <u><b>Contact</b></u>
+        <br />
+        nrabbi@outlook.com
+        <br />
+        Charlotte, NC
+      </div>
+
+      <div class="col-xs-12 col-sm-3 text-center">
+        <b class="">Social</b>
+        <br />
+        <br />
+        
+        <%= link_to 'http://github.com/nrabbi' do %>
+          <%= image_tag 'github.png', class: 'social-button' %>
+        <% end %>
+
+        <%= link_to 'https://www.linkedin.com/in/nrabbi' do %>
+          <%= image_tag 'linkedin.png', class: 'social-button' %>
+        <% end %>
+
+        <%= link_to 'http://twitter.com/itsmehrabbi' do %>
+          <%= image_tag 'twitter.png', class: 'social-button' %>
+        <% end %>
+
+      </div>
+
   </div>
 
 </body>
