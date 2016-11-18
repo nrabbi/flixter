@@ -30,7 +30,10 @@ Rails.application.routes.draw do
   end
 
   resource :dashboard, only: [:show]
-  
+
+  get 'privacy', to: 'static_pages#privacy'
+  get 'team', to: 'static_pages#team'
+  get 'career', to: 'static_pages#career'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
