@@ -3,7 +3,7 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things i have learnt through making this web applicationa are documented below.
+Things i have learnt through making this web application are documented below.
 
 * I learned to use the carrierwave gem for uploading videos
 * I learned to use stripe gem to integrate a payment feature
