@@ -13,4 +13,5 @@ Things i have learnt through making this web application are documented below.
 
 Live Demo: http://flixter-nrabbi.herokuapp.com
 
-Last Update: 23rd Novemeber 8:29pm
+# Update
+This app is using the Cedar-14 stack, which reached end-of-life on May 1st, 2019. So the demo is not working, however the source code is available for educational purposes.
